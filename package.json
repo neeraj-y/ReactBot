@@ -1,0 +1,29 @@
+{
+  "name": "nodesession",
+  "version": "1.0.0",
+  "description": "session management with node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --inspect server",
+    "backend": "nodemon --inspect server.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "dependencies": {
+    "aws-sdk": "^2.477.0",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "express-hbs": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "path": "*",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}
