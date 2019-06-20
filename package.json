@@ -19,10 +19,11 @@
     "express-validator": "*",
     "path": "*",
     "uuid": "^3.3.2",
-    "concurrently": "^4.1.0"
-  },
-  "devDependencies": {    
+    "concurrently": "^4.1.0",
     "nodemon": "*"
+  },
+  "devDependencies": {
+
   },
   "author": "",
   "license": "ISC"
