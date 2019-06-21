@@ -4,10 +4,11 @@
   "description": "session management with node.js",
   "main": "index.js",
   "scripts": {
-    "dev": "node --inspect server",
+    "dev": "node server.js",
     "backend": "nodemon --inspect server.js",
     "frontend": "npm run start --prefix client",
-    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+    "start12": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "start": "concurrently \"cd client && npm run start\" \"npm run dev\""
   },
   "dependencies": {
     "aws-sdk": "^2.477.0",
