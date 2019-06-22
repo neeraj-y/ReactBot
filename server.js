@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const session = require("express-session");
@@ -6,6 +7,9 @@ const uuid = require("uuid/v4");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+// server static files from the React app
+app.use(express.static(path.join(__dirname, "client/build")));
 
 app.use(session({
   secret: uuid(),
@@ -25,8 +29,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res, next) => {
-  // res.send("Hello");
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
 app.post('/api/df_text_query', (req, res) => {
