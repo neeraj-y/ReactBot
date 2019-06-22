@@ -4,27 +4,23 @@
   "description": "session management with node.js",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "start": "node server.js",
     "backend": "nodemon --inspect server.js",
     "frontend": "npm run start --prefix client",
-    "start12": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "start": "(cd client && npm run start) && npm run dev"
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "aws-sdk": "^2.477.0",
     "body-parser": "*",
     "cookie-parser": "*",
     "express": "*",
-    "express-hbs": "*",
-    "express-session": "*",
-    "express-validator": "*",
     "path": "*",
-    "uuid": "^3.3.2",
-    "concurrently": "^4.1.0",
-    "nodemon": "*"
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-
+    "concurrently": "^4.1.0",
+    "nodemon": "*"
   },
   "author": "",
   "license": "ISC"
