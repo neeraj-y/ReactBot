@@ -18,7 +18,7 @@
     "express-session": "*",
     "path": "*",
     "uuid": "^3.3.2",
-    "xlsx": "^0.14.4"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
