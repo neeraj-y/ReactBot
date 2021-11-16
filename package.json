@@ -10,7 +10,7 @@
     "start": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "dependencies": {
-    "aws-sdk": "^2.477.0",
+    "aws-sdk": "^2.814.0",
     "body-parser": "*",
     "convert-excel-to-json": "^1.6.1",
     "cookie-parser": "*",
